@@ -1,38 +1,60 @@
 .App {
+  font-family: sans-serif;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  padding: 8px;
+}
+
+.actions button {
+  margin: 0 5px;
+}
+
+.avatar img {
+  width: 50px;
+}
+
+.full-name {
+  text-align: left;
+}
+
+.modal-avatar {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.modal-avatar img {
+  width: 200px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.no-data {
+  text-align: center;
+  border: 1px solid grey;
+  width: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#del-message {
+  position: absolute;
+  right: 40px;
+  top: 10px;
+  border: 1px solid rgb(192, 243, 192);
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.genereate {
+  width: 300px;
+  border: 1px solid #dddddd;
+  margin-top: 10px;
+  padding: 5px;
 }
