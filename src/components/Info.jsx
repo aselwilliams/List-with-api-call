@@ -7,7 +7,7 @@ class Info extends Component {
     super();
     this.state = {
       student: {},
-      isLoading: false
+      isLoading: false,
     };
   }
 
@@ -23,7 +23,7 @@ class Info extends Component {
   render() {
     const {
       modal: { status },
-      toggle
+      toggle,
     } = this.props;
     const { fname, lname, age, avatar, phone } = this.state.student;
     const { isLoading } = this.state;

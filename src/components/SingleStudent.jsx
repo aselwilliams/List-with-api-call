@@ -7,7 +7,7 @@ class SingleStudent extends Component {
     const url = `https://627ef576b1cc1b12624eaac1.mockapi.io/api/v1/students/${id}`;
 
     fetch(url, {
-      method: "DELETE"
+      method: "DELETE",
     })
       .then((res) => res.json())
       .then((s) => {
@@ -20,12 +20,12 @@ class SingleStudent extends Component {
   render() {
     const {
       student: { id, fname, lname, age, phone, avatar },
-      toggle
+      toggle,
     } = this.props;
     const imgContent = avatar.indexOf("http") === 0 ? avatar : noimg;
     return (
       <>
-        <tr className='border'>
+        <tr className="border">
           <td>{id}</td>
           <td className="avatar border">
             <img src={imgContent} alt="" />
@@ -33,7 +33,7 @@ class SingleStudent extends Component {
           <td className="full-name">
             {fname} {lname}
           </td>
-          <td className='border'>{age}</td>
+          <td className="border">{age}</td>
           <td>{phone}</td>
           <td className="actions border">
             <Button color="secondary" onClick={() => toggle(id, "info")}>

@@ -11,10 +11,10 @@ class StudentsList extends Component {
       students: [],
       modal: {
         type: "info",
-        status: false
+        status: false,
       },
       id: null,
-      isDeleted: false
+      isDeleted: false,
     };
   }
 
@@ -32,7 +32,7 @@ class StudentsList extends Component {
   toggle = (id, type) => {
     this.setState({
       modal: { status: !this.state.modal.status, type: type },
-      id: id
+      id: id,
     });
   };
 
@@ -53,15 +53,15 @@ class StudentsList extends Component {
     return (
       <>
         {isDeleted && <span id="del-message">User has been deleted</span>}
-        <table className='border'>
-          <thead >
+        <table className="border">
+          <thead>
             <tr>
               <th>ID</th>
-              <th className='border'>Avatar</th>
+              <th className="border">Avatar</th>
               <th>Full Name</th>
-              <th className='border'>Age</th>
+              <th className="border">Age</th>
               <th>Phone #</th>
-              <th className='border'>Actions</th>
+              <th className="border">Actions</th>
             </tr>
           </thead>
           <tbody>

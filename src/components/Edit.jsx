@@ -7,7 +7,7 @@ import {
   ModalFooter,
   Form,
   FormGroup,
-  Input
+  Input,
 } from "reactstrap";
 
 class Edit extends Component {
@@ -19,8 +19,8 @@ class Edit extends Component {
         lname: "",
         age: 0,
         phone: "215-333-4545",
-        avatar: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
-      }
+        avatar: "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg",
+      },
     };
   }
 
@@ -38,9 +38,9 @@ class Edit extends Component {
     fetch(url, {
       method: "PUT",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(this.state.student)
+      body: JSON.stringify(this.state.student),
     })
       .then((res) => res.json())
       .then((s) => {
@@ -54,14 +54,14 @@ class Edit extends Component {
     const name = e.target.name;
     const value = e.target.value;
     this.setState((prevState) => ({
-      student: { ...prevState.student, [name]: value }
+      student: { ...prevState.student, [name]: value },
     }));
   };
 
   render() {
     const {
       modal: { status },
-      toggle
+      toggle,
     } = this.props;
     const { fname, lname, age, phone, avatar } = this.state.student;
     return (
